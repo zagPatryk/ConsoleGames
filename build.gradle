@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //external
+    testImplementation('junit:junit:4.13')
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+}
+
+test {
+    useJUnitPlatform()
+}
