@@ -1,5 +1,7 @@
 package RockPaperScissors;
 
+import java.util.Objects;
+
 public class Player implements GameBase {
     private final String name;
     private int pointsNumber = 0;
@@ -21,12 +23,16 @@ public class Player implements GameBase {
         pointsNumber++;
     }
 
+    public void zeroPoints() {
+        pointsNumber = 0;
+    }
+
     public Move getMove() {
         return move;
     }
 
-    public void setMove() {
-        System.out.println("Rock, paper or scissors? Chose");
+    public boolean setMove() {
+        System.out.println("Rock, paper or scissors? Chose. Type Q to exit.");
         boolean breaker = false;
         while (!breaker) {
             String input = scanner.nextLine();
@@ -43,11 +49,13 @@ public class Player implements GameBase {
                     move = Move.SCISSORS;
                     breaker = true;
                     break;
+                case "Q":
+                    return false;
                 default:
-                    System.out.println("Rock, paper or scissors? Type R, P or S");
+                    System.out.println("Rock, paper or scissors? Type R, P, S or Q");
                     break;
             }
         }
+        return true;
     }
-
 }

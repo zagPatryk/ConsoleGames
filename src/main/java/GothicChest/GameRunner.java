@@ -9,10 +9,6 @@ public class GameRunner implements GameBase {
         System.out.println(player);
         options.help();
 
-        // umożliwić pokazanie zręczności w menu i poziomu golda i wytrychów
-        // coś zrobić żeby wyszyścić koonsole po nieudanych ruchu by utrudnić
-        // dodać dźwięki zamiast tekstów
-
         while (!breaker && player.getLockpicksNumber() > 0) {
             if (player.getLockpicksNumber() == 0) {
                 breaker = true;

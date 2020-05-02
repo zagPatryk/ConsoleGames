@@ -1,7 +1,9 @@
 package RockPaperScissors;
 
+import java.util.Objects;
+
 public class Computer implements GameBase {
-    private int difficultLevel;
+    private int difficultLevel = 1;
     private int pointsNumber;
     private Move move;
 
@@ -24,14 +26,6 @@ public class Computer implements GameBase {
         }
     }
 
-    public int getPointsNumber() {
-        return pointsNumber;
-    }
-
-    public void addPoint() {
-        pointsNumber++;
-    }
-
     public Move getComputerMove(Move playerMove){
         if (difficultLevel == 1) {
             return Move.getRandomMove();
@@ -40,6 +34,7 @@ public class Computer implements GameBase {
             switch (randomInt) {
                 case 0:
                 case 1:
+                    move = winningMove.get(playerMove);
                     break;
                 case 2:
                     move = playerMove;
@@ -50,8 +45,21 @@ public class Computer implements GameBase {
                     move = playerMove;
                     break;
             }
-            return Move.getRandomMove();
+            return move;
         }
 
     }
+
+    public void addPoint() {
+        pointsNumber++;
+    }
+
+    public void zeroPoints() {
+        pointsNumber = 0;
+    }
+
+    public int getPointsNumber() {
+        return pointsNumber;
+    }
+
 }

@@ -4,15 +4,10 @@ import java.util.*;
 
 public class CombinationRandomizer implements GameBase{
 
-    List<String> combination = new ArrayList<>();
-
     public List<String> getCombination (int length){
+        List<String> combination = new ArrayList<>();
         for (int i = 0; i < length; i++) {
-            if (random.nextBoolean()) {
-                combination.add("L");
-            } else {
-                combination.add("P");
-            }
+            combination.add(random.nextBoolean() ? "L" : "P");
         }
         return combination;
     }

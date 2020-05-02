@@ -51,7 +51,6 @@ public class Game implements GameBase {
                     break;
             }
         }
-        combination.clear();
 
         if (player.getLockpicksNumber() > 0 && queue.size() == 0 ) {
             int gold = (combinationLength-2) * random.nextInt(100);
