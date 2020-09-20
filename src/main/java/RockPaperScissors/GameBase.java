@@ -33,12 +33,13 @@ public interface GameBase {
 
     enum Move {
         ROCK, PAPER, SCISSORS;
+
         public static Move getRandomMove() {
             return values()[random.nextInt(values().length)];
         }
     }
 
     enum Result {
-        PlayerWin, ComputerWin, Draw;
+        PlayerWin, ComputerWin, Draw
     }
 }

@@ -2,7 +2,7 @@ package RockPaperScissors;
 
 import java.util.Objects;
 
-public class Round implements GameBase{
+public class Round implements GameBase {
     private Move playerMove;
     private Move computerMove;
 

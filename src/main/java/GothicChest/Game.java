@@ -16,7 +16,7 @@ public class Game implements GameBase {
 
             input = scanner.nextLine();
 
-            switch(input){
+            switch (input) {
                 case "L":
                 case "P":
                     if (queue.poll().equals(input)) {
@@ -25,7 +25,7 @@ public class Game implements GameBase {
                     } else {
                         player.brokenLockpick();
                         queue = new ArrayDeque<>(combination);
-                        if (player.getLockpicksNumber() >0 ) {
+                        if (player.getLockpicksNumber() > 0) {
                             System.out.println("Zacznij od początku...");
                         }
                     }
@@ -52,13 +52,13 @@ public class Game implements GameBase {
             }
         }
 
-        if (player.getLockpicksNumber() > 0 && queue.size() == 0 ) {
-            int gold = (combinationLength-2) * random.nextInt(100);
+        if (player.getLockpicksNumber() > 0 && queue.size() == 0) {
+            int gold = (combinationLength - 2) * random.nextInt(100);
             int lockpicks = combinationLength - random.nextInt(combinationLength);
 
             player.addGold(gold);
             player.addLockpick(lockpicks);
-            System.out.println("\nZnalazłeś "  + gold  + " złota i " + lockpicks + " wytrychy!");
+            System.out.println("\nZnalazłeś " + gold + " złota i " + lockpicks + " wytrychy!");
         }
     }
 }

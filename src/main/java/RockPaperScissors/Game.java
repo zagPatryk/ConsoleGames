@@ -2,7 +2,7 @@ package RockPaperScissors;
 
 import java.util.InputMismatchException;
 
-public class Game implements GameBase{
+public class Game implements GameBase {
     private int pointsToWin;
 
     public void playGame(Player player, Computer computer) {

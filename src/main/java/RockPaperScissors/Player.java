@@ -36,7 +36,7 @@ public class Player implements GameBase {
         boolean breaker = false;
         while (!breaker) {
             String input = scanner.nextLine();
-            switch(input){
+            switch (input) {
                 case "R":
                     move = Move.ROCK;
                     breaker = true;

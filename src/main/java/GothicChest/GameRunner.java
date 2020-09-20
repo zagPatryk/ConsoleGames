@@ -14,16 +14,16 @@ public class GameRunner implements GameBase {
                 breaker = true;
             }
             System.out.println("Jaki zamek chcesz otworzyć?\n 1 - Prosty \n 2 - Klasyczny \n 3 - Prawdziwe wyzwanie \n" +
-                    " Q - Koniec gry" );
+                    " Q - Koniec gry");
             switch (scanner.nextLine()) {
                 case "1":
-                    game.playGame(player,4);
+                    game.playGame(player, 4);
                     break;
                 case "2":
-                    game.playGame(player,8);
+                    game.playGame(player, 8);
                     break;
                 case "3":
-                    game.playGame(player,15);
+                    game.playGame(player, 15);
                     break;
                 case "Q":
                     breaker = true;

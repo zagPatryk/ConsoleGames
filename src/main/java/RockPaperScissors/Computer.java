@@ -26,7 +26,7 @@ public class Computer implements GameBase {
         }
     }
 
-    public Move getComputerMove(Move playerMove){
+    public Move getComputerMove(Move playerMove) {
         if (difficultLevel == 1) {
             return Move.getRandomMove();
         } else {

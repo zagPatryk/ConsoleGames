@@ -1,6 +1,6 @@
 package RockPaperScissors;
 
-public class RockPaperScissorsRunner implements GameBase{
+public class RockPaperScissorsRunner implements GameBase {
     public static void main(String[] args) {
         System.out.println("What is your name?");
         Player player = new Player(scanner.nextLine());
